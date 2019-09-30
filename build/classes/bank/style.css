@@ -1,0 +1,24 @@
+#main{
+    -fx-background-color: #333333;
+}
+#mainPaneau{
+    -fx-background-color: #44C2EB;
+}
+
+#chef,#guichetier{
+    -fx-cursor: hand;
+}
+.button{
+    -fx-background-color:   #1976d3;
+    -fx-cursor: hand;
+}
+
+.button:hover{
+        -fx-background-color:   #5096EA;
+
+}
+.button:pressed{
+    -fx-background-color:   #1363BC;
+}
+
+

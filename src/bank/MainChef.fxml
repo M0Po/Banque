@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainPaneau" prefHeight="650.0" prefWidth="1050.0" style="-fx-background-color: #EFF3F6;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.MainChefController">
+   <children>
+      <VBox layoutY="196.0" prefHeight="456.0" prefWidth="200.0" style="-fx-background-color: #1976d3;">
+         <children>
+            <Button id="BtnPaneau" fx:id="BtnStatistique" mnemonicParsing="false" onAction="#StatVisible" prefHeight="68.0" prefWidth="202.0" style="-fx-background-color: #1976d3;" stylesheets="@style.css" text="Statistiques générale" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/stats.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="BtnPaneau" fx:id="BtnAjouter" mnemonicParsing="false" onAction="#AjouterVisible" prefHeight="68.0" prefWidth="208.0" style="-fx-background-color: #1976d3;" stylesheets="@style.css" text="Ajouter un guichetier" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="BtnPaneau" fx:id="BtnLisGui" mnemonicParsing="false" onAction="#ListGuiVisible" prefHeight="68.0" prefWidth="203.0" style="-fx-background-color: #1976d3;" stylesheets="@style.css" text="Listes des guichetiers" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/listgui.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="BtnPaneau" fx:id="BtnLisCl" mnemonicParsing="false" onAction="#ListClVisible" prefHeight="68.0" prefWidth="201.0" style="-fx-background-color: #1976d3;" stylesheets="@style.css" text="Liste des clients" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/listclient.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button id="BtnPaneau" fx:id="BtnHisto" mnemonicParsing="false" onAction="#HistoVisible" prefHeight="68.0" prefWidth="204.0" style="-fx-background-color: #1976d3;" stylesheets="@style.css" text="L'historique des opérations" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pictures/history.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label opacity="0.85" prefHeight="19.0" prefWidth="162.0" text="Developed by TeamBBA" textAlignment="CENTER" textFill="#a1a1a1" translateX="22.0" translateY="95.0" />
+         </children>
+      </VBox>
+      <Pane prefHeight="39.0" prefWidth="1050.0" style="-fx-background-color: #1976d3;" AnchorPane.bottomAnchor="611.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="9.0" fitWidth="50.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/connect.png" />
+               </image>
+            </ImageView>
+            <Button alignment="TOP_RIGHT" layoutX="909.0" mnemonicParsing="false" onAction="#Déconnecter" prefHeight="39.0" prefWidth="137.0" style="-fx-background-color: #1976d3;" text="Se déconnecter" textFill="#cd1212" underline="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Label layoutX="29.0" layoutY="9.0" text="Connecté" textFill="#19e42a" underline="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneAjouter" layoutX="195.0" layoutY="196.0" prefHeight="456.0" prefWidth="852.0" style="-fx-background-color: #1363BC;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="196.0">
+         <children>
+            <TextField fx:id="id" alignment="CENTER" layoutX="401.0" layoutY="70.0" prefHeight="30.0" prefWidth="340.0" promptText="ID" style="-fx-background-color: #1976d3;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nom" alignment="CENTER" layoutX="401.0" layoutY="110.0" prefHeight="30.0" prefWidth="340.0" promptText="Nom" style="-fx-background-color: #1976d3;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="prenom" alignment="CENTER" layoutX="401.0" layoutY="150.0" prefHeight="30.0" prefWidth="340.0" promptText="Prenom" style="-fx-background-color: #1976d3;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="date" layoutX="401.0" layoutY="190.0" prefHeight="30.0" prefWidth="340.0" style="-fx-background-color: #1976d3;" />
+            <TextField fx:id="user" alignment="CENTER" layoutX="401.0" layoutY="230.0" prefHeight="30.0" prefWidth="340.0" promptText="Nom de l'utilisateur" style="-fx-background-color: #1976d3;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="pass" alignment="CENTER" layoutX="401.0" layoutY="270.0" prefHeight="30.0" prefWidth="340.0" promptText="Mot de passe" style="-fx-background-color: #1976d3;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="repass" alignment="CENTER" layoutX="401.0" layoutY="310.0" prefHeight="30.0" prefWidth="340.0" promptText="Confirmation de Mot de passe" style="-fx-background-color: #1976d3;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <Button layoutX="357.0" layoutY="371.0" mnemonicParsing="false" onAction="#vider" prefHeight="55.0" prefWidth="151.0" style="-fx-background-color: white;" text="Vider les champs" textFill="#1363bc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="602.0" layoutY="370.0" mnemonicParsing="false" onAction="#exit" prefHeight="55.0" prefWidth="137.0" style="-fx-background-color: white;" text="Quitter" textFill="#1363bc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="125.0" layoutY="370.0" mnemonicParsing="false" onAction="#confirmer" prefHeight="55.0" prefWidth="137.0" style="-fx-background-color: white;" text="Confirmer" textFill="#1363bc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="125.0" layoutY="70.0" prefHeight="30.0" prefWidth="200.0" text="ID : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="125.0" layoutY="110.0" prefHeight="30.0" prefWidth="200.0" text="Nom : " textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="125.0" layoutY="148.0" prefHeight="30.0" prefWidth="200.0" text="Prénom :" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="125.0" layoutY="190.0" prefHeight="30.0" prefWidth="200.0" text="Date de naissance :" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="125.0" layoutY="230.0" prefHeight="30.0" prefWidth="200.0" text="Nom de l'utilisateur :" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="125.0" layoutY="270.0" prefHeight="30.0" prefWidth="200.0" text="Mot de passe :" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="125.0" layoutY="310.0" prefHeight="30.0" prefWidth="219.0" text="Confirmation mot de passe :" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="-3.0" prefHeight="41.0" prefWidth="852.0" text="Ajouter un guichetier" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="paneListGui" layoutX="198.0" layoutY="196.0" prefHeight="456.0" prefWidth="852.0" style="-fx-background-color: #1363BC;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="196.0">
+         <children>
+            <TableView fx:id="TableGui" layoutX="20.0" layoutY="95.0" prefHeight="350.0" prefWidth="820.0">
+               <columns>
+                  <TableColumn fx:id="IDtableGui" prefWidth="205.0" resizable="false" text="ID" />
+                  <TableColumn fx:id="NomTableGui" prefWidth="205.0" resizable="false" text="Nom" />
+                  <TableColumn fx:id="PrenomTableGui" minWidth="0.0" prefWidth="205.0" resizable="false" text="Prenom" />
+                  <TableColumn fx:id="DateTableGui" prefWidth="240.0" resizable="false" text="Date de Naissance" />
+               </columns></TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" prefHeight="89.0" prefWidth="852.0" text=" Liste des guichetiers" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneListCl" layoutX="198.0" layoutY="196.0" prefHeight="456.0" prefWidth="852.0" style="-fx-background-color: #1363BC;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="196.0">
+         <children>
+            <TableView fx:id="TableCl" layoutX="20.0" layoutY="95.0" prefHeight="350.0" prefWidth="820.0">
+               <columns>
+                  <TableColumn fx:id="IDtableCl" minWidth="0.0" prefWidth="164.0" resizable="false" text="ID" />
+                  <TableColumn fx:id="NomTableCl" minWidth="0.0" prefWidth="164.0" resizable="false" text="Nom" />
+                  <TableColumn fx:id="PrenomTableCl" minWidth="0.0" prefWidth="164.0" resizable="false" text="Prenom" />
+                  <TableColumn fx:id="DateTableCl" prefWidth="164.0" resizable="false" text="Date de Naissance" />
+                  <TableColumn fx:id="SoldeTableCl" prefWidth="164.0" resizable="false" text="Solde" />
+               </columns>
+            </TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="89.0" prefWidth="852.0" text="Liste des clients" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneHisto" layoutX="198.0" layoutY="196.0" prefHeight="456.0" prefWidth="852.0" style="-fx-background-color: #1363BC;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="196.0">
+         <children>
+            <TableView fx:id="TableHisto" layoutX="20.0" layoutY="95.0" prefHeight="350.0" prefWidth="820.0">
+               <columns>
+                  <TableColumn fx:id="IDOpTableHisto" maxWidth="4500.0" prefWidth="120.0" resizable="false" text="ID de opération" />
+                  <TableColumn fx:id="LabelTableHisto" prefWidth="340.0" resizable="false" text="Label" />
+                  <TableColumn fx:id="DateTableHisto" minWidth="0.0" prefWidth="117.0" resizable="false" text="Date " />
+                  <TableColumn fx:id="HeureTableHisto" prefWidth="92.0" resizable="false" text="Heure" />
+                  <TableColumn fx:id="IDGuiTableHisto" prefWidth="150.0" resizable="false" text="ID de guichetier" />
+               </columns>
+            </TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="89.0" prefWidth="852.0" text=" L'historique des opérations" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneStat" layoutX="198.0" layoutY="196.0" prefHeight="456.0" prefWidth="852.0" style="-fx-background-color: #1363BC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="196.0">
+         <children>
+            <TextField fx:id="nombCl" alignment="CENTER" editable="false" layoutX="368.0" layoutY="112.0" prefHeight="30.0" prefWidth="335.0" style="-fx-background-color: #1976d3;">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nombGui" alignment="CENTER" editable="false" layoutX="368.0" layoutY="189.0" prefHeight="30.0" prefWidth="335.0" style="-fx-background-color: #1976d3;">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="SoldeT" alignment="CENTER" editable="false" layoutX="368.0" layoutY="270.0" prefHeight="30.0" prefWidth="335.0" style="-fx-background-color: #1976d3;">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Button layoutX="367.0" layoutY="355.0" mnemonicParsing="false" onAction="#exit" prefHeight="55.0" prefWidth="137.0" style="-fx-background-color: white;" text="Quitter" textFill="#1363bc">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="168.0" layoutY="112.0" prefHeight="30.0" prefWidth="200.0" text="Nombre de clients :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="169.0" layoutY="189.0" prefHeight="30.0" prefWidth="200.0" text="Nombre de guichetiers :" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="168.0" layoutY="270.0" prefHeight="30.0" prefWidth="200.0" text="Solde totale :" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="89.0" prefWidth="833.0" text="Statistiques générale" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="199.0" layoutY="22.0" prefHeight="177.0" prefWidth="852.0" text="Paneau de chef" textAlignment="CENTER">
+         <font>
+            <Font name="Manjari Bold" size="83.0" />
+         </font>
+      </Label>
+      <Pane layoutY="40.0" prefHeight="156.0" prefWidth="180.0" style="-fx-background-color: #EFF3F6;">
+         <children>
+            <ImageView fitHeight="116.0" fitWidth="100.0" layoutX="44.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/cs2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
